@@ -59,14 +59,6 @@ paascloud:
       enable: true
   zk:
     zkAddressList: paascloud-provider-zk:2181
-  qiniu:
-    key:
-      accessKey: yourQiniuAccessKey
-      secretKey: yourQiniuSecretKey
-    oss:
-      privateHost:
-      publicHost:
-      fileMaxSize: 104857600
   oauth2:
     jwtSigningKey: paascloud
     client:
@@ -76,22 +68,3 @@ paascloud:
       clientSecret: ${security.oauth2.client.clientSecret}
       clientAuthenticationScheme: header
       tokenStore: jwt
-  aliyun:
-    key:
-      accessKeyId: yourAliyunAccessKey
-      accessKeySecret: yourAliyunKeySecret
-    rocketMq:
-      enable: true
-      reliableMessageConsumer: true
-      reliableMessageProducer: false
-      namesrvAddr: paascloud-mq-rocket:9876
-      instanceName: paascloud-provider-opc
-      consumerGroup: CID_OPC
-      producerGroup: PID_OPC
-    sms:
-      signName: 快乐学习网
-      regionId: cn-beijing
-      endpoint:
-      endpointName: cn-beijing
-      product: Dysmsapi
-      domain: dysmsapi.aliyuncs.com
